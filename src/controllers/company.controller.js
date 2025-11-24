@@ -1,4 +1,5 @@
 const CompanyModel = require('../models/company.model');
+const { sqlPool } = require('../services/db');
 
 exports.getAllCompanies = async (req, res) => {
     try {
@@ -37,6 +38,22 @@ exports.deleteCompany = async (req, res) => {
         const deleted = await CompanyModel.remove(id);
         if (!deleted) return res.status(404).json({ message: "Entreprise non trouvée." });
         res.status(204).send();
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
+exports.getCompanySessions = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const query = `
+            SELECT s.*, t.title as training_title 
+            FROM sessions s
+            JOIN trainings t ON s.training_id = t.id
+            WHERE s.company_id = $1
+        `;
+        const result = await sqlPool.query(query, [id]);
+        res.status(200).json(result.rows);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }

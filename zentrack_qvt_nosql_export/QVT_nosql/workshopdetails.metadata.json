@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"training_id":{"$numberInt":"1"}},"name":"training_id_1","unique":true}],"uuid":"26d31da78eb443d88798eda28aeda23f","collectionName":"workshopdetails","type":"collection"}

@@ -4,7 +4,9 @@ const router = express.Router();
 const trainingRoutes = require('./trainings.routes');
 const sessionRoutes = require('./session.routes');
 const companyRoutes = require('./company.routes');
+const authRoutes = require('./auth.routes');
 
+router.use('/auth', authRoutes); 
 router.use('/trainings', trainingRoutes);
 router.use('/sessions', sessionRoutes);
 router.use('/companies', companyRoutes);

@@ -12,8 +12,8 @@ Ce projet implémente l'API Back-End (V1) de ZenTrack Core, une plateforme desti
 | :--- | :--- | :--- |
 | **Serveur** | Node.js / Express | Environnement d'exécution et Framework. |
 | **Architecture** | MVC (Model-View-Controller) | Structure modulaire et claire. |
-| **Base SQL** | PostgreSQL (via `pg`) | [cite_start]Gestion des entités relationnelles : `companies`, `trainings`, `sessions`, `registrations`. |
-| **Base NoSQL** | MongoDB (via `mongoose`) | [cite_start]Stockage des descriptions pédagogiques détaillées (`workshopDetails`) . |
+| **Base SQL** | PostgreSQL (via `pg`) | Gestion des entités relationnelles : `companies`, `trainings`, `sessions`, `registrations`. |
+| **Base NoSQL** | MongoDB (via `mongoose`) | Stockage des descriptions pédagogiques détaillées (`workshopDetails`) . |
 
 ---
 
